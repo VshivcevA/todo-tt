@@ -1,0 +1,28 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background: radial-gradient(50% 50% at 50% 50%, #252e42 0%, #161c2e 100%)
+    center no-repeat;
+  background-size: 100vw 100vh;
+  animation: radial-gradient 10s ease infinite;
+}
+
+@keyframes radial-gradient {
+  0% {
+    background-size: 100vw 100vh;
+  }
+  50% {
+    background-size: 200vw 200vh;
+  }
+  100% {
+    background-size: 100vw 100vh;
+  }
+}

@@ -1,0 +1,43 @@
+.todo {
+  &__label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__label input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  &__checkmark {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $navy-gray;
+    border-radius: 6px;
+  }
+  &__label:hover input ~ .todo__checkmark {
+    background-color: $accente-opacity;
+  }
+  &__label input:checked ~ .todo__checkmark {
+    background-color: $accente;
+  }
+  &__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  &__label input:checked ~ .todo__checkmark:after {
+    display: block;
+  }
+  &__label .todo__checkmark:after {
+    width: 20px;
+    height: 20px;
+    background: center url("../img/checkbox.svg") no-repeat;
+  }
+}
